@@ -42,6 +42,10 @@ class Plot:
     plt.bar(x,tuple(amplituder),width = 0.35,color='r')
     plt.bar(x,tuple(amplitudeg),width = 0.35,color='g')
     plt.savefig(self.stock_name+'_'+self.plot_kind+'.png')
-
- # def raloamplitude(self,date,amplitude):
+  def MACDPlot(self,DIF,DEM):
+    x = np.arange(79)
+    plt.ylim(-5,5)
+    plt.plot(x,DIF,'r')
+    plt.plot(x,DEM,'g')
+    plt.show()
 
